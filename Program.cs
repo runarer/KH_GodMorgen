@@ -14,7 +14,7 @@ while(string.IsNullOrEmpty(name))
 // Spør bruker om fødselsdato
 string format = "DD/MM-ÅÅÅÅ";
 Console.WriteLine("Skriv inn fødselsdato: " + format);
-DateTime birthDate;
+DateTime birthDate = new();
 string dateInput = string.Empty;
 while(string.IsNullOrEmpty(dateInput))
 {    
@@ -53,7 +53,11 @@ Dictionary<DayOfWeek,string> motivation = new()
 Console.WriteLine(motivation[today.DayOfWeek]);
 
 // Regn ut hvor mange dager brukeren har vært i live.
+int aliveFor = (today - birthDate).Days;
+
 // Skriv ut en melding med antall dager.
+Console.WriteLine($"Du har nå levd {aliveFor} {( (aliveFor == 1) ? "dag": "dager")} ." );
+
 
 // Lag hilsen basert på tidspunktet
 static string Greetings(DateTime dateTime)
