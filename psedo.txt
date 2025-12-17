@@ -10,6 +10,7 @@
 // Regn ut hvor mange dager brukeren har vært i live.
 // Skriv ut en melding med antall dager.
 
+
 // Lag hilsen basert på tidspunktet
 //  Hvis klokka er mellom 03-09 returner "God Morgen"
 //  Hvis klokka er mellom 09-12 returner "God formiddag"
