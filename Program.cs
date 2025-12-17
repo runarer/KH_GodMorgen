@@ -56,7 +56,7 @@ Console.WriteLine(motivation[today.DayOfWeek]);
 int aliveFor = (today - birthDate).Days;
 
 // Skriv ut en melding med antall dager.
-Console.WriteLine($"Du har nå levd {aliveFor} {( (aliveFor == 1) ? "dag": "dager")} ." );
+Console.WriteLine($"Du har nå levd {aliveFor} {( (aliveFor == 1) ? "dag": "dager")}." );
 
 
 // Lag hilsen basert på tidspunktet
