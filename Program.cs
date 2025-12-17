@@ -24,7 +24,7 @@ while(string.IsNullOrEmpty(name))
 // }
 
 // Spør systemet om dagens dato og klokka
-DateTime today = new();
+DateTime today = DateTime.Now;
 
 // Få hilsen
 string greetings = Greetings(today);
@@ -73,6 +73,3 @@ static string Greetings(DateTime dateTime)
     return "God natt";
 }
 
-
-
-//Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
