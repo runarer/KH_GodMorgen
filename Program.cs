@@ -4,6 +4,8 @@ while(string.IsNullOrEmpty(name))
 {
     Console.WriteLine("Skriv inn navet ditt");
     name = Console.ReadLine() ?? "";
+    if(name.Length < 3)
+        name = "";
 }
 
 // Spør bruker om fødselsdato
@@ -29,22 +31,23 @@ DateTime today = DateTime.Now;
 // Få hilsen
 string greetings = Greetings(today);
 
-// Lag en dict med <ukedag,motiverende tekst>
-Dictionary<DayOfWeek,string> motivation = new()
-{
-    [DayOfWeek.Monday] = "kun fem dager igjen til helg",
-    [DayOfWeek.Tuesday] = "kun fire dager igjen til helg",
-    [DayOfWeek.Wednesday] = "kun tre dager igjen til helg",
-    [DayOfWeek.Thursday] = "kun to dager igjen til helg",
-    [DayOfWeek.Friday] = "bare idag igjen, så er det helg",
-    [DayOfWeek.Saturday] = "nå er det helg ",
-    [DayOfWeek.Sunday] = "siste dag av helgen",
-};
-
 // Skriv ut melding med <hilsen> <navn>, det er <ukedag> og klokka er <hh:mm>.
 Console.WriteLine($"{greetings} {name}, det er {(today.ToString("dddd"))}");
 
+// Lag en dict med <ukedag,motiverende tekst>
+Dictionary<DayOfWeek,string> motivation = new()
+{
+    [DayOfWeek.Monday] = "Kun fem dager igjen til helg.",
+    [DayOfWeek.Tuesday] = "Kun fire dager igjen til helg.",
+    [DayOfWeek.Wednesday] = "Kun tre dager igjen til helg.",
+    [DayOfWeek.Thursday] = "Kun to dager igjen til helg.",
+    [DayOfWeek.Friday] = "Bare idag igjen, så er det helg.",
+    [DayOfWeek.Saturday] = "Nå er det helg.",
+    [DayOfWeek.Sunday] = "Siste dag av helgen.",
+};
 // Skriv ut motiverende tekst.
+Console.WriteLine(motivation[today.DayOfWeek]);
+
 // Regn ut hvor mange dager brukeren har vært i live.
 // Skriv ut en melding med antall dager.
 
