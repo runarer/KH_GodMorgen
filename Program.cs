@@ -7,7 +7,7 @@ while(string.IsNullOrEmpty(name))
     if(name.Length < 3)
     {
         name = "";
-        Console.WriteLine("Your name is to short, get a new one!")
+        Console.WriteLine("Your name is to short, get a new one!");
     }
 }
 
@@ -35,7 +35,7 @@ DateTime today = DateTime.Now;
 string greetings = Greetings(today);
 
 // Skriv ut melding med <hilsen> <navn>, det er <ukedag> og klokka er <hh:mm>.
-Console.WriteLine($"{greetings} {name}, det er {(today.ToString("dddd"))}");
+Console.WriteLine($"{greetings} {name}, det er {(today.ToString("dddd"))} og klokka er {today.ToString("HH:MM")}.");
 
 // Lag en dict med <ukedag,motiverende tekst>
 Dictionary<DayOfWeek,string> motivation = new()
