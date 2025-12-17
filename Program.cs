@@ -30,15 +30,15 @@ DateTime today = DateTime.Now;
 string greetings = Greetings(today);
 
 // Lag en dict med <ukedag,motiverende tekst>
-Dictionary<string,string> motivation = new()
+Dictionary<DayOfWeek,string> motivation = new()
 {
-    ["Monday"] = "kun fem dager igjen til helg",
-    ["Tuesday"] = "kun fire dager igjen til helg",
-    ["Wednesday"] = "kun tre dager igjen til helg",
-    ["Thursday"] = "kun to dager igjen til helg",
-    ["Friday"] = "bare idag igjen, så er det helg",
-    ["Saturday"] = "nå er det helg ",
-    ["Sunday"] = "siste dag av helgen",
+    [DayOfWeek.Monday] = "kun fem dager igjen til helg",
+    [DayOfWeek.Tuesday] = "kun fire dager igjen til helg",
+    [DayOfWeek.Wednesday] = "kun tre dager igjen til helg",
+    [DayOfWeek.Thursday] = "kun to dager igjen til helg",
+    [DayOfWeek.Friday] = "bare idag igjen, så er det helg",
+    [DayOfWeek.Saturday] = "nå er det helg ",
+    [DayOfWeek.Sunday] = "siste dag av helgen",
 };
 
 // Skriv ut melding med <hilsen> <navn>, det er <ukedag> og klokka er <hh:mm>.
