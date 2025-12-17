@@ -5,7 +5,10 @@ while(string.IsNullOrEmpty(name))
     Console.WriteLine("Skriv inn navet ditt");
     name = Console.ReadLine() ?? "";
     if(name.Length < 3)
+    {
         name = "";
+        Console.WriteLine("Your name is to short, get a new one!")
+    }
 }
 
 // Spør bruker om fødselsdato
