@@ -12,21 +12,22 @@ while(string.IsNullOrEmpty(name))
 }
 
 // Spør bruker om fødselsdato
-// Console.WriteLine("Skriv inn fødselsdato: YYYY-MM-DD");
-// DateTime birthDate;
-// string dateInput = string.Empty;
-// while(string.IsNullOrEmpty(dateInput))
-// {    
-//     dateInput = Console.ReadLine()  ?? "";
-//     bool success = DateTime.TryParse(dateInput,out birthDate);
+string format = "DD/MM-ÅÅÅÅ";
+Console.WriteLine("Skriv inn fødselsdato: " + format);
+DateTime birthDate;
+string dateInput = string.Empty;
+while(string.IsNullOrEmpty(dateInput))
+{    
+    dateInput = Console.ReadLine()  ?? "";
+    bool success = DateTime.TryParse(dateInput,out birthDate);
 
-//     //  Hvis fødselsdato ikke er formatert riktig, si ifra og spør på nytt
-//     if(!success)
-//     {
-//         Console.WriteLine("Dato ble ikke skrevet inn riktig, bruk: YYYY-MM-DD");
-//         dateInput = "";
-//     }
-// }
+    //  Hvis fødselsdato ikke er formatert riktig, si ifra og spør på nytt
+    if(!success)
+    {
+        Console.WriteLine("Dato ble ikke skrevet inn riktig, bruk: " + format);
+        dateInput = "";
+    }
+}
 
 // Spør systemet om dagens dato og klokka
 DateTime today = DateTime.Now;
