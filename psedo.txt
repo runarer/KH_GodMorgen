@@ -1,0 +1,18 @@
+// Spør bruker om navn, inntil minst 3 bokstaver er skrevet inn
+// Spør bruker om fødselsdato
+//  Hvis fødselsdato ikke er formatert riktig, si ifra og spør på nytt
+// Spør systemet om dagens dato
+// Spør systemet hva klokka er
+// Få hilsen
+// Lag en dict med <ukedag,motiverende tekst>
+// Skriv ut melding med <hilsen> <navn>, det er <ukedag> og klokka er <hh:mm>.
+// Skriv ut motiverende tekst.
+// Regn ut hvor mange dager brukeren har vært i live.
+// Skriv ut en melding med antall dager.
+
+// Lag hilsen basert på tidspunktet
+//  Hvis klokka er mellom 03-09 returner "God Morgen"
+//  Hvis klokka er mellom 09-12 returner "God formiddag"
+//  Hvis klokka er mellom 12-18 returner "God dag"
+//  Hvis klokka er mellom 18-23 returner "God kveld"
+//  returner "God natt"
